@@ -3,12 +3,32 @@
   <head>
     <!-- <meta charset="utf-8"> -->
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
-    <title></title>
+    <title>Find a show</title>
   </head>
   <body>
 
+    <header>
+      <h1 class="logo">Logo</h1>
+      <h1 class="slogan">Show Finder</h1>
+    </header>
+
+    <nav>
+      <ul class="nav_line">
+        <li>
+          <a href="addshows.html">Shows</a>
+        </li>
+        <li>
+          <a href="venue.html">Venues</a>
+        </li>
+        <li>
+          <a href="about.html">About Us</a>
+        </li>
+      </ul>
+    </nav>
+
     <aside>                           <!-- Side bar for searching on main page -->
       <fieldset class="Search_Bar">
+        <p>Find a show near you!</p>
         <ul>
           <li>
             <select name="search_show">
@@ -40,14 +60,22 @@
 
           <li>
             <form name="select_price">
-            <input type="radio" name="price" value="low"/> $10 - $20
-            <input type="radio" name="price" value="mid"/> $20 - $40
-            <input type="radio" name="price" value="high"/> $40+
+            <input type="checkbox" name="price" value="low"/> $10 - $20
+            <input type="checkbox" name="price" value="mid"/> $20 - $40
+            <input type="checkbox" name="price" value="high"/> $40+
             </form>
           </li>
         </ul>
       </fieldset>
     </aside>
+
+    <footer>
+      <ul class="footer">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+      </ul>
+    </footer>
 
   </body>
 </html>
