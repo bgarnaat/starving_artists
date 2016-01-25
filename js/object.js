@@ -14,7 +14,7 @@ var data_shows_types = [];
 var data_shows_description = [];
 var data_shows = [data_shows_name, data_shows_types, data_shows_description];
 
-function Schedules(show, venue, date_start, date_end, price, time) {
+function Event(show, venue, date_start, date_end, price, time) {
   this.show = show;
   this.venue = venue;
   this.date_start = date_start;
@@ -23,13 +23,13 @@ function Schedules(show, venue, date_start, date_end, price, time) {
   this.time = time;
 };
 
-function Shows(show_name, show_type, show_description) {
+function Show(show_name, show_type, show_description) {
   this.show_name = show_name;
   this.show_type = show_type;
   this.show_description = show_description;
 };
 
-function Venues(venue_name, venue_address, venue_neighborhood, venue_box_hours, venue_phone, venue_occupancy, venue_description) {
+function Venue(venue_name, venue_address, venue_neighborhood, venue_box_hours, venue_phone, venue_occupancy, venue_description) {
   this.venue_name = venue_name;
   this.venue_address = venue_address;
   this.venue_neighborhood = venue_neighborhood;
@@ -38,3 +38,7 @@ function Venues(venue_name, venue_address, venue_neighborhood, venue_box_hours, 
   this.venue_occupancy = venue_occupancy;
   this.venue_description = venue_description;
 }
+
+var shows = [];
+var venues = [];
+var events = [];
