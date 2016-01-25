@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Show - ShowFinder</title>
+  </head>
+  <body>
+    <form id="createshow" method="post">
+      <legend>Add A Show</legend>
+      <label>Show Name<input type="text" name="show_name"/></label>
+      <label>Start Date<input type="date" name="start_date"/></label>
+      <label>End Date<input type="date" name="end_date"/></label>
+      <label>Ticket Price<input type="number" name="price"/></label>
+      <label>Description
+        <textarea name="description" rows="8" cols="50">Enter a description...</textarea></label>
+      <label>Venue
+        <select name="venue">
+          <option value="theater1">Theater #1</option>
+          <option value="theater2">Theater #2</option>
+        </select>
+      </label>
+      <label>Type
+        <select name="type">
+          <option value="Theatre">Theatre</option>
+          <option value="Dance">Dance</option>
+          <option value="comedy-spoken_word">Comedy/Spoken Word</option>
+          <option value="cabaret-burlesque">Cabaret/Burlesque</option>
+          <option value="music">Music</option>
+        </select>
+      </label>
+    </form>
+  </body>
+</html>
