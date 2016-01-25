@@ -1,24 +1,24 @@
 
-localStorage.setItem('event_data', JSON.stringify(scheduled_events);
-  var event_data = localStorage.getItem('event_data');
-  if(scheduled_events) {
-  scheduled_events = JSON.parse(scheduled_events);
+  var ls_event_data = localStorage.getItem('ls_event_data');
+  if(ls_event_data) {
+  scheduled_events = JSON.parse(ls_event_data);
   } else {
   console.log('local storage empty! initializing:');
+  localStorage.setItem('ls_event_data', JSON.stringify(scheduled_events);
   }
 
-localStorage.setItem('show_data', JSON.stringify(shows);
-  var show_data = localStorage.getItem('show_data');
-  if(shows) {
-  shows = JSON.parse(shows);
+  var ls_show_data = localStorage.getItem('ls_show_data');
+  if(ls_show_data) {
+  shows = JSON.parse(ls_show_data);
   } else {
   console.log('local storage empty! initializing:');
+  localStorage.setItem('ls_show_data', JSON.stringify(shows);
   }
 
-localStorage.setItem('venue_data', JSON.stringify(venues);
-  var venue_data = localStorage.getItem('venue_data');
-  if(venues) {
-  venues = JSON.parse(venues);
+  var ls_venue_data = localStorage.getItem('ls_venue_data');
+  if(ls_venue_data) {
+  venues = JSON.parse(ls_venue_data);
   } else {
   console.log('local storage empty! initializing:');
+  localStorage.setItem('ls_venue_data', JSON.stringify(venues);
   }
