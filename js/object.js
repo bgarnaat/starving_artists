@@ -28,3 +28,13 @@ function Shows(show_name, show_type, show_description) {
   this.show_type = show_type;
   this.show_description = show_description;
 };
+
+function Venues(venue_name, venue_address, venue_neighborhood, venue_box_hours, venue_phone, venue_occupancy, venue_description) {
+  this.venue_name = venue_name;
+  this.venue_address = venue_address;
+  this.venue_neighborhood = venue_neighborhood;
+  this.venue_box_hours = venue_box_hours;
+  this.venue_phone = venue_phone;
+  this.venue_occupancy = venue_occupancy;
+  this.venue_description = venue_description;
+}
