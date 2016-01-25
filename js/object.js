@@ -16,7 +16,7 @@ var data_shows = {
   this.descriptions = []
 }
 
-function data_schedules(show, venue, date_start, date_end, price, time) = {
+function Schedules(show, venue, date_start, date_end, price, time) = {
   this.show = show;
   this.venue = venue;
   this.date_start = date_start;
