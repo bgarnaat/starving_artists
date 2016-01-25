@@ -50,7 +50,7 @@ function Show(show_name, show_type, show_description) {
   this.show_name = show_name;
   this.show_type = show_type;
   this.show_description = show_description;
-};
+}
 function ScheduledEvent(show, venue, date_start, date_end, price, time) {
   this.show = show;
   this.venue = venue;
@@ -58,3 +58,4 @@ function ScheduledEvent(show, venue, date_start, date_end, price, time) {
   this.date_end = date_end;
   this.time = time;
   this.price = price;
+}
