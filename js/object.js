@@ -18,11 +18,11 @@ var data_shows_types = ['Type 1', 'Type 2', 'Type 3'];
 var data_shows_description = ['More text 1', 'More text 2', 'More text 3'];
 var data_shows = [data_shows_name, data_shows_types, data_shows_description];
 
-for (var i = 0; i < data_venues.length; i++) {
-  venues.push(data_venues[0][i], data_venues[1][i], data_venues[2][i], data_venues[3][i], data_venues[4][i], data_venues[5][i], data_venues[6][i]);
+for (var i = 0; i < data_venues[0].length; i++) {
+  venues.push(new Venue(data_venues[0][i], data_venues[1][i], data_venues[2][i], data_venues[3][i], data_venues[4][i], data_venues[5][i], data_venues[6][i]));
 }
 for (var i = 0; i < data_shows_name.length; i++) {
-  shows.push(data_shows[0][i], data_shows[1][i], data_shows[2][i]);
+  shows.push(new Show(data_shows[0][i], data_shows[1][i], data_shows[2][i]));
 }
 
 var data_event_show = [shows[0], shows[1], shows[2]];
@@ -34,7 +34,7 @@ var data_event_price = [11, 22, 33];
 var data_event = [data_event_show, data_event_venue, data_event_start, data_event_end, data_event_time, data_event_price];
 
 for (var i = 0; i < data_event_show.length; i++) {
-  scheduled_events.push(data_event[0], data_event[1], data_event[2], data_event[3], data_event[4], data_event[5]);
+  scheduled_events.push(new ScheduledEvent(data_event[0], data_event[1], data_event[2], data_event[3], data_event[4], data_event[5]));
 }
 
 function Venue(venue_name, venue_address, venue_neighborhood, venue_box_hours, venue_phone, venue_occupancy, venue_description) {
