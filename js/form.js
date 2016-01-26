@@ -16,7 +16,7 @@ function addVenue() {
 }
 
 //Get input
-var searchButton = document.getElementById('search');
+var searchButton = document.getElementById('search');  // not needed.  - BG
 var addShowButton = document.getElementById('add_show');
 var resetFormButton = document.getElementById('reset_form');
 var addVenueButton = document.getElementById('add_venue');
