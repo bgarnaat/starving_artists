@@ -22,9 +22,9 @@ var resetFormButton = document.getElementById('reset_form');
 var addVenueButton = document.getElementById('venueCreateForm');
 
 //Event Listeners for 'Add Show', 'Add Venue', 'Search',  and 'Reset Form' buttons
-//form_search.addEventListener('submit', eventHandlerSubmit);
-//addShowButton.addEventListener('submit', addShowFunction_goes_here);
-//resetFormButton.addEventListener('click', resetFormFunction_goes_here);
+form_search.addEventListener('submit', eventHandlerSubmit);
+addShowButton.addEventListener('submit', addShowFunction_goes_here);
+resetFormButton.addEventListener('click', resetFormFunction_goes_here);
 addVenueButton.addEventListener('submit', addVenue);
 
 function addVenue(event) {
