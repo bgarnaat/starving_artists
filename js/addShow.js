@@ -1,5 +1,17 @@
 createshow.addEventListener('submit', add_show);
 
+
+function fillVenueDropdown(){
+  var venueDropdown = document.getElementById('venueDropdown');
+  for (var i = 0; i < venues.length; i++) {
+    var venueOption = document.createElement('option');
+    venueOption.setAttribute('value', venues[i]);
+    venueOption.innerText = venues[i].venue_name;
+    venueDropdown.appendChild(venueOption);
+  }
+}
+fillVenueDropdown();
+
 function add_show(event) {
   console.log(event);
   event.preventDefault();
