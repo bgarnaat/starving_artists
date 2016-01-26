@@ -12,6 +12,9 @@
     <nav>
       <ul class="nav_line">
         <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
           <a href="addshows.html">Shows</a>
         </li>
         <li>
@@ -28,8 +31,10 @@
       <label>Start Date<input type="date" name="start_date"/></label>
       <label>End Date<input type="date" name="end_date"/></label>
       <label>Ticket Price<input type="number" name="price"/></label>
+      <label>Ticket Page<input type="url" name="ticketPage" value="http://"></label>
+      <label>Time<input type="text" name="time"/></label>
       <label>Description
-        <textarea name="description" rows="8" cols="50">Enter a description...</textarea></label>
+        <textarea name="in_description" rows="8" cols="50">Enter a description...</textarea></label>
       <label>Venue
         <select name="venue">
           <option value="theater1">Theater #1</option>
@@ -37,7 +42,7 @@
         </select>
       </label>
       <label>Type
-        <select name="type">
+        <select name="in_type">
           <option value="Theatre">Theatre</option>
           <option value="Dance">Dance</option>
           <option value="comedy-spoken_word">Comedy/Spoken Word</option>
@@ -45,11 +50,13 @@
           <option value="music">Music</option>
         </select>
       </label>
-      <button id="add_show">Add Show</button>
+      <button id="add_show" type="submit">Add Show</button>
       <button id="reset_form">Reset Form</button>
     </form>
     <script src='js/form.js'></script>
     <script src='js/html_generator.js'></script>
     <script src='js/object.js'></script>
+    <script src='js/local.js'></script>
+    <script src='js/addShow.js'></script>
   </body>
 </html>

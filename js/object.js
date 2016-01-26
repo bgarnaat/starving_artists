@@ -53,11 +53,12 @@ function Show(show_name, show_type, show_description) {
   this.show_type = show_type;
   this.show_description = show_description;
 }
-function ScheduledEvent(show, venue, date_start, date_end, time, price) {
+function ScheduledEvent(show, venue, date_start, date_end, time, price, ticketPage) {
   this.show = show;
   this.venue = venue;
   this.date_start = date_start;
   this.date_end = date_end;
   this.time = time;
   this.price = price;
+  this.ticketPage = ticketPage;
 }
