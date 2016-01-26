@@ -4,6 +4,7 @@ var shows = [];
 var venues = [];
 var scheduled_events = [];
 
+var data_neighborhoods = ['Ballard', 'Capitol Hill', 'Central District', 'Downtown', 'Fremont', 'Greenlake/Greenwood', 'Lake City', 'North Seattle', 'Queen Anne/Seattle Center', 'Sodo/International District', 'South Seattle', 'University District', 'Wallingford', 'West Seattle'];
 var data_venues_name = ['Venue 1', 'Venue 2', 'Venue 3'];
 var data_venues_address = ['Address 1', 'Address 2', 'Address 3'];
 var data_venues_neighborhood = ['Area 1', 'Area 2', 'Area 3'];

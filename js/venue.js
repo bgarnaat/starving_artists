@@ -1,5 +1,3 @@
-var allNeighborhoods = ['Ballard', 'Capitol Hill', 'Central District', 'Downtown', 'Fremont', 'Greenlake/Greenwood', 'Lake City', 'North Seattle', 'Queen Anne/Seattle Center', 'Sodo/International District', 'South Seattle', 'University District', 'Wallingford', 'West Seattle'];
-
 var venueCreateForm = document.getElementById('venueCreateForm');
 
 venueCreateForm.addEventListener('submit', addVenue);
