@@ -1,4 +1,4 @@
-
+  
   var ls_event_data = localStorage.getItem('ls_event_data');
   if(ls_event_data) {
   scheduled_events = JSON.parse(ls_event_data);
