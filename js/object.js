@@ -36,18 +36,13 @@ var data_event = [data_event_show, data_event_venue, data_event_start, data_even
 console.log('data_event_show.length: ' + data_event_show.length);
 for (var i = 0; i < data_event_show.length; i++) {
   scheduled_events.push(new ScheduledEvent((data_event[0][i]), (data_event[1][i]), (data_event[2][i]), (data_event[3][i]), (data_event[4][i]), (data_event[5][i])));
-  console.log(data_event[0][i]);
-  console.log(data_event[1][i]);
-  console.log(data_event[2][i]);
-  console.log(data_event[3][i]);
-  console.log(data_event[4][i]);
-  console.log(data_event[5][i]);
 }
 
-function Venue(venue_name, venue_address, venue_neighborhood, venue_box_hours, venue_phone, venue_occupancy, venue_description) {
+function Venue(venue_name, venue_address, venue_neighborhood, venue_webpage, venue_box_hours, venue_phone, venue_occupancy, venue_description) {
   this.venue_name = venue_name;
   this.venue_address = venue_address;
   this.venue_neighborhood = venue_neighborhood;
+  this.venue_webpage = venue_webpage;
   this.venue_box_hours = venue_box_hours;
   this.venue_phone = venue_phone;
   this.venue_occupancy = venue_occupancy;
