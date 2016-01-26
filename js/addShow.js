@@ -15,7 +15,7 @@ function add_show(event) {
     // ticketPage: event.target.ticketPage.value;
   };
   console.log(new_show);
-  shows.push(new Show(new_show.in_name, new_show.venue, new_show.in_type));
+  shows.push(new Show(new_show.in_name, new_show.in_type, new_show.in_description));
   scheduled_events.push(new ScheduledEvent(shows[shows.length - 1], new_show.venue, new_show.start_date, new_show.date_end, new_show.in_time, new_show.price, new_show.ticketPage))  ;
   localStorage.setItem('add_show_data', JSON.stringify(shows));
   localStorage.setItem('add_event_data', JSON.stringify(scheduled_events));
