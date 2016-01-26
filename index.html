@@ -27,46 +27,49 @@
     </nav>
 
     <aside>                           <!-- Side bar for searching on main page -->
-      <fieldset class="Search_Bar">
-        <p>Find a show near you!</p>
-        <ul>
-          <li>
-            <select name="search_show">
-              <option value="Show">Select Show</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-            </select>
-          </li>
+      <form id="form_search">
+        <fieldset>
+          <legend>Find a show near you!</legend>
+          <ul>
+            <li>
+              <select name="input_show">
+                <option value="">Select Show</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+              </select>
+            </li>
 
-          <li>
-            <input type="date"></input>
-          </li>
+            <li>
+              <input name="input_date" type="date"></input>
+            </li>
 
-          <li>
-            <select name="select_Venue">
-              <option value="Show">Select Venue</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-            </select>
-          </li>
+            <li>
+              <select name="input_venue">
+                <option value="">Select Venue</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+              </select>
+            </li>
 
-          <li>
-            <select name="select_Type">
-              <option value="Show">Type of show</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-            </select>
-          </li>
+            <li>
+              <select name="input_type">
+                <option value="">Type of show</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+              </select>
+            </li>
 
-          <li>
-            <form name="select_price">
-            <input type="checkbox" name="price" value="low"/> $10 - $20
-            <input type="checkbox" name="price" value="mid"/> $20 - $40
-            <input type="checkbox" name="price" value="high"/> $40+
-            </form>
-          </li>
-        </ul>
-      </fieldset>
+            <li>
+              <form name="select_price">
+                <input type="checkbox" name="input_low" value="low"/> $0 - $20
+                <input type="checkbox" name="input_med" value="mid"/> $20 - $40
+                <input type="checkbox" name="input_high" value="high"/> $40+
+              </form>
+            </li>
+          </ul>
+          <button id="button_search" type="submit">Search</button>
+        </fieldset>
+      </form>
     </aside>
     <section id="searchResultsContainer">
     </section>
@@ -81,5 +84,8 @@
     <script src="js/html_generator.js"></script>
     <script src="js/object.js"></script>
     <script src="js/local.js"></script>
+    <script src="js/search_bg.js">
+
+    </script>
   </body>
 </html>
