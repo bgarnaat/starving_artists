@@ -1,3 +1,6 @@
+'use strict';
+
+console.log('hi');
 //addShow Function
 function addShow() {
 
@@ -10,19 +13,45 @@ function resetForm() {
 function search() {
 
 }
-//addVenue Function
-function addVenue() {
 
-}
 
 //Get input
 var searchButton = document.getElementById('search');  // not needed.  - BG
 var addShowButton = document.getElementById('add_show');
 var resetFormButton = document.getElementById('reset_form');
-var addVenueButton = document.getElementById('add_venue');
+var addVenueButton = document.getElementById('venueCreateForm');
 
 //Event Listeners for 'Add Show', 'Add Venue', 'Search',  and 'Reset Form' buttons
-form_search.addEventListener('submit', eventHandlerSubmit);
-addShowButton.addEventListener('submit', addShowFunction_goes_here);
-resetFormButton.addEventListener('click', resetFormFunction_goes_here);
-addVenueButton.addEventListener('submit', addVenueFunction_goes_here);
+//form_search.addEventListener('submit', eventHandlerSubmit);
+//addShowButton.addEventListener('submit', addShowFunction_goes_here);
+//resetFormButton.addEventListener('click', resetFormFunction_goes_here);
+addVenueButton.addEventListener('submit', addVenue);
+
+function addVenue(event) {
+  event.preventDefault();
+
+  console.log(event);
+  var input = {
+    venueName: event.target.newVenueName.value,
+    address: event.target.newVenueLocation.value,
+    neighborhood: event.target.newVenueNeighborhood.value,
+    webpage: event.target.venueWebpage.value,
+    phone: event.target.venuePhone.value,
+    boxHours: event.target.venueBoxHours.value,
+    occupancy: event.target.venueOcc.value,
+    venueDescription: event.target.venueDescription.value,
+  };
+  console.log(input);
+  venues.push(new Venue(input.venueName, input.address, input.neighborhood, input.webpage, input.boxHours, input.phone, input.occupancy, input.venueDescription));
+  localStorage.setItem('ls_venue_data', JSON.stringify(venues));
+
+  event.target.newVenueName.value = null;
+  event.target.newVenueLocation.value = null;
+  event.target.newVenueNeighborhood.value = null;
+  event.target.venueWebpage.value = null;
+  event.target.venuePhone.value = null;
+  event.target.venueBoxHours.value = null;
+  event.target.venueOcc.value = null;
+  event.target.venueDescription.value = null;
+
+}
