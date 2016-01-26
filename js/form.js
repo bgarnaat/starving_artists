@@ -12,14 +12,6 @@ function search() {
 
 }
 
-var clearButton = document.getElementById('clearButton');
-clearButton.addEventListener('click', clearStorage);
-
-function clearStorage() {
-  localStorage.clear();
-  console.log('clearing');
-}
-
 //Get input
 // var searchButton = document.getElementById('form_search');  // not needed.  - BG
 // var createshow = document.getElementById('createshow');
