@@ -23,11 +23,12 @@ function add_show(event) {
     in_time: event.target.time.value,
     in_description: event.target.in_description.value,
     venue: event.target.venue.value,
-    in_type: event.target.in_type.value
-    // ticketPage: event.target.ticketPage.value;
+    in_type: event.target.in_type.value,
+    pic: event.target.showPic.value,
+    ticketPage: event.target.ticketPage.value
   };
   console.log(new_show);
-  shows.push(new Show(new_show.in_name, new_show.in_type, new_show.in_description));
+  shows.push(new Show(new_show.in_name, new_show.in_type, new_show.in_description, new_show.pic));
   scheduled_events.push(new ScheduledEvent(shows[shows.length - 1], venues[new_show.venue], new_show.start_date, new_show.date_end, new_show.in_time, new_show.price, new_show.ticketPage))  ;
   localStorage.setItem('ls_show_data', JSON.stringify(shows));
   localStorage.setItem('ls_event_data', JSON.stringify(scheduled_events));
@@ -41,4 +42,5 @@ function add_show(event) {
   event.target.venue.value = null;
   event.target.in_type.value = null;
   event.target.ticketPage.value = null;
+  event.target.showPic.value = null;
 }
