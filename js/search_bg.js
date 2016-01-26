@@ -13,15 +13,23 @@ function eventHandlerSubmit(event) {
     in_high: event.target.input_high.value
   };
 
-  // data_location.push(new Location(input.in_name, input.in_abbr, input.in_min, input.in_max, input.in_cup, input.in_lbs));
-
-  event.target.input_show.value = null;
-  event.target.input_date.value = null;
-  event.target.input_venue.value = null;
-  event.target.input_type.value = null;
-  event.target.input_low.value = null;
-  event.target.input_med.value = null;
-  event.target.input_high.value = null;
 }
 
-form_search.addEventListener('submit', eventHandlerSubmit);
+function checkEvents(input) {
+  scheduled_events.forEach(function(item, index, array) {
+    check_name = input.in_show !== ' '? input.in_show === item.show.show_name : true;
+    check_date = input.in_date !== '' ? (input.in_date >= item.date_start || input.in_date <= item.date_end) : true;
+    check_venue = input.in_venue !== '' ? input.in_venue === item.venue.venue_name : true;
+    check_type = input.in_type !== '' ? input.in_type === item.show.show_type : true;
+    check_low = item.price < 20 ? input.low === true : true; // if price < 20 do something
+    check_med = item.price >= 20 && item.price < 40 ? input.med === true : true; // if price >= 20 && price < 40 do this
+    check_high = ; // if >= 40 do all the things
+
+    if (check_name && check_date && check_venue && check_type && check_low && check_med && check_high) {
+      displayEventCart(item);
+    }
+  });
+
+}
+
+// form_search.addEventListener('submit', eventHandlerSubmit);  // this was included in form.js
