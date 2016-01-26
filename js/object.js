@@ -48,10 +48,11 @@ function Venue(venue_name, venue_address, venue_neighborhood, venue_webpage, ven
   this.venue_occupancy = venue_occupancy;
   this.venue_description = venue_description;
 }
-function Show(show_name, show_type, show_description) {
+function Show(show_name, show_type, show_description, showPic) {
   this.show_name = show_name;
   this.show_type = show_type;
   this.show_description = show_description;
+  this.showPic = showPic;
 }
 function ScheduledEvent(show, venue, date_start, date_end, time, price, ticketPage) {
   this.show = show;
