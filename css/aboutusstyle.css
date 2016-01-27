@@ -1,0 +1,20 @@
+.tilt {
+  -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        border-radius: 120px;
+}
+
+.tilt:hover {
+  -webkit-transform: rotate(15deg);
+   -moz-transform: rotate(15deg);
+     -o-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+        transform: rotate(15deg);
+}
+
+/*#jeffengphoto {
+  border-radius: 50px;
+}*/
