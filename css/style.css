@@ -14,7 +14,7 @@ header {
   width: 100%;
 }
 
-.subBody {
+.main {
   display: flex;
   margin: 0px;
   padding: 0px;
@@ -22,19 +22,30 @@ header {
   margin-top: 155px;
 }
 
+.aside_left {
+  flex: 1 6 20%;
+  /*position: fixed;*/
+  order: 1;
+  margin: 4px;
+  padding: 5px;
+}
+
 #searchResultsContainer {
   flex: 3 1 60%;
   order: 2;
   margin: 4px;
   padding: 5px;
-  margin-left: 30%;
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+  flex-flow: column, wrap;
+  /*margin-left: 30%;*/
 }
 
-
-.aside_bar {
+.aside_right {
   flex: 1 6 20%;
   /*position: fixed;*/
-  order: 1;
+  order: 3;
   margin: 4px;
   padding: 5px;
 }
