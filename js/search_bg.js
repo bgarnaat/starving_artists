@@ -13,6 +13,7 @@ function eventHandlerSubmit(event) {
     in_med: event.target.input_med.checked,
     in_high: event.target.input_high.checked,
   }
+  clearCards();
   checkEvents(input);
 }
 
@@ -28,13 +29,17 @@ function checkEvents(input) {
     var check_high = item.price >=40 ? item.in_high === true : true; // if >= 40 do all the things
 
     if (check_show && check_venue && check_type && check_low && check_med && check_high) {
-      displayEventCart(item);
-      console.log('shearch does true');
+      displayEventCard(item, index);
     } else {
-      console.log('search does false');
     }
   });
-
 }
 
-// form_search.addEventListener('submit', eventHandlerSubmit);  // this was included in form.js
+function clearCards() {
+  var node = document.getElementById('searchResultsContainer');
+  while (node.hasChildNodes()) {
+    node.removeChild(node.firstChild);
+  }
+}
+
+form_search.addEventListener('submit', eventHandlerSubmit);  // this was included in form.js
