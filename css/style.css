@@ -1,0 +1,68 @@
+
+
+
+.nav_line {
+  display: flex;
+  justify-content: center;
+}
+
+.nav_line > li {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+.search_bar {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 80%;
+}
+
+#form_search {
+  padding: 1px 1px 1px 1px;
+}
+
+.searchList {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchList > li {
+  margin: 12px 12px 12px -40px;*/
+  text-align: left;
+  display: flex;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+#button_search {
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer > li {
+  list-style: none;
+  margin-left: 50px;
+  margin-right: 50px;
+}
