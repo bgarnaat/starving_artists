@@ -5,6 +5,7 @@
     -ms-transition: all 0.5s ease;
         transition: all 0.5s ease;
         border-radius: 120px;
+        opacity: .5;
 }
 
 .tilt:hover {
@@ -13,8 +14,14 @@
      -o-transform: rotate(15deg);
     -ms-transform: rotate(15deg);
         transform: rotate(15deg);
+        opacity: 1;
 }
 
-/*#jeffengphoto {
-  border-radius: 50px;
-}*/
+.bios {
+  display: flex;
+}
+
+.profile {
+  width: 500px;
+  height: 300px;
+}
