@@ -23,6 +23,7 @@ function clearVenueCards(node) {
 function displayEventCard(item, index) {
   var card = document.createElement('section');
   card.id = index;
+  card.className = 'card';
 
   var card_show = document.createElement('article');
   var card_aside = document.createElement('aside');
@@ -57,28 +58,30 @@ function displayEventCard(item, index) {
 
 function displayVenueCard (event) {
   var card = event.target.parentNode.parentNode.parentNode.parentNode;
-  var card_index = card.id;
-  var card_venue = document.createElement('article');
-  var venue_aside = document.createElement('aside');
-  var venue_ul = document.createElement('ul');
-  var li_link = document.createElement('li');
+  if (card.className === 'card') {
+    var card_index = card.id;
+    var card_venue = document.createElement('article');
+    var venue_aside = document.createElement('aside');
+    var venue_ul = document.createElement('ul');
+    var li_link = document.createElement('li');
 
-  clearVenueCards(card);
+    clearVenueCards(card);
 
-  makeEl(card_venue, 'h3', scheduled_events[card_index].venue.venue_name);
-  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_address);
-  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_neighborhood);
-  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_phone);
-  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_box_hours);
-  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_occupancy);
-  makeLink(li_link, scheduled_events[card_index].venue.venue_webpage, scheduled_events[card_index].venue.venue_webpage);
+    makeEl(card_venue, 'h3', scheduled_events[card_index].venue.venue_name);
+    makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_address);
+    makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_neighborhood);
+    makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_phone);
+    makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_box_hours);
+    makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_occupancy);
+    makeLink(li_link, scheduled_events[card_index].venue.venue_webpage, scheduled_events[card_index].venue.venue_webpage);
 
-  venue_ul.appendChild(li_link);
-  venue_aside.appendChild(venue_ul);
-  card_venue.appendChild(venue_aside);
-  card.appendChild(card_venue);
+    venue_ul.appendChild(li_link);
+    venue_aside.appendChild(venue_ul);
+    card_venue.appendChild(venue_aside);
+    card.appendChild(card_venue);
 
-  makeEl(card_venue, 'p', scheduled_events[card_index].venue.venue_description);  // create paragraph after attaching ul
+    makeEl(card_venue, 'p', scheduled_events[card_index].venue.venue_description);  // create paragraph after attaching ul
+  }
 }
 
 search_results_container.addEventListener('click', displayVenueCard);
