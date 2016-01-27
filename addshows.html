@@ -7,52 +7,70 @@
   </head>
   <body>
     <header>
-      <h1 class="logo">Logo</h1>
-      <h1 class="slogan">Show Finder</h1>
+      <div class="container_title">
+        <img src="" class="logo">
+        <hgroup>
+          <h1 class="title">Show Finder</h1>
+          <h3 class="slogan">slogan</h3>
+        </hgroup>
+      </div>
+      <nav class="navbar">
+        <ul class="nav_line">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="addshows.html">Shows</a>
+          </li>
+          <li>
+            <a href="venue.html">Venues</a>
+          </li>
+          <li>
+            <a href="about.html">About Us</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <ul class="nav_line">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="addshows.html">Shows</a>
-        </li>
-        <li>
-          <a href="venue.html">Venues</a>
-        </li>
-        <li>
-          <a href="about.html">About Us</a>
-        </li>
-      </ul>
-    </nav>
-    <form id="createshow" method="post">
-      <legend>Add A Show</legend>
-      <label>Show Name<input type="text" name="show_name"/></label>
-      <label>Start Date<input type="date" name="start_date"/></label>
-      <label>End Date<input type="date" name="end_date"/></label>
-      <label>Ticket Price<input type="number" name="price"/></label>
-      <label>Ticket Page<input type="url" name="ticketPage" value="http://"></label>
-      <label>Time<input type="text" name="time"/></label>
-      <label>Description
-        <textarea name="in_description" rows="8" cols="50">Enter a description...</textarea></label>
-      <label>Venue
-        <select name="venue" id="venueDropdown">
-        </select>
-      </label>
-      <label>Add a Picture<input type="url" name="showPic"</label>
-      <label>Type of show
-        <select name="in_type">
-          <option value="comedy-spoken_word">Comedy/Spoken Word</option>
-          <option value="Theatre">Theatre</option>
-          <option value="Dance">Dance</option>
-          <option value="cabaret-burlesque">Cabaret/Burlesque</option>
-          <option value="music">Music</option>
-        </select>
-      </label>
-      <button id="add_show" type="submit">Add Show</button>
-      <button id="reset_form">Reset Form</button>
-    </form>
+
+    <div class="main">
+      <aside class="aside_left">
+        <form id="createshow" method="post">
+          <fieldset>
+            <legend>Add A Show!</legend>
+          <ul class="addShowList">
+            <li><label>Show Name</label><input class="input" type="text" name="show_name"/></li>
+            <li><label>Start Date</label><input class="input" type="date" name="start_date"/></li>
+            <li><label>End Date</label><input type="date" name="end_date"/></li>
+            <li><label>Ticket Price</label><input type="number" name="price"/></li>
+            <li><label>Ticket Page</label><input type="url" name="ticketPage" value="http://"></li>
+            <li><label>Time</label><input type="text" name="time"/></li>
+            <li><label>Venue</label><select name="venue" id="venueDropdown"></select></li>
+            <li><label>Add a Picture</label><input type="url" name="showPic"></li>
+            <li><label>Type of show</label>
+              <select name="in_type">
+                <option value="comedy-spoken_word">Comedy/Spoken Word</option>
+                <option value="Theatre">Theatre</option>
+                <option value="Dance">Dance</option>
+                <option value="cabaret-burlesque">Cabaret/Burlesque</option>
+                <option value="music">Music</option>
+              </select>
+            </li>
+            <li><label>Description</label></li>
+            <li><textarea name="in_description" rows="5" cols="50">Enter a description...</textarea></li>
+            <li><button id="add_show" type="submit">Add Show</button></li>
+            <li><button id="reset_form">Reset Form</button></li>
+          </ul>
+        </fieldset>
+        </form>
+      </aside>
+      <section class="center">
+        <p>Add show pop-up information</p>
+      </section>
+      <aside class="aside_right">
+        <p>Right side content</p>
+      </aside>
+    </div>
+
     <script src='js/form.js'></script>
     <script src='js/html_generator.js'></script>
     <script src='js/object.js'></script>
