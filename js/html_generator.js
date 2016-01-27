@@ -1,94 +1,77 @@
 var searchResultsContainer = document.getElementById('searchResultsContainer');
 
-function displayEventCard() {
-  var eventVenueCard = document.createElement('section')
-  eventVenueCard.setAttribute('id', 'UNIQUE INDEXED ID')
+function displayEventCard(item) {
+  var card = document.createElement('section');
+  var card_show = document.createElement('article');
+  card_show.className = 'card_show';
+  card.appendChild(card_show);
 
-  var eventCard = document.createElement('article');
-  eventCard.setAttribute('class', 'eventCard');
+  makeEl(card_show, 'h3', item.show.show_name);
 
-  var displayShowName = document.createElement('h3');
-  displayShowName.innerText = 'SHOWNAME';
-  eventCard.appendChild(displayShowName);
+  var card_aside = document.createElement('aside');
+  var card_ul = document.createElement('ul');
 
-  var displayShowType = document.createElement('h3');
-  displayShowType.innerText = 'SHOWTYPE';
-  eventCard.appendChild(displayShowType);
+  makeEl(card_ul, 'li', item.show.show_type);
+  makeEl(card_ul, 'li', item.venue.venue_name);
+  makeEl(card_ul, 'li', item.date_start);
+  makeEl(card_ul, 'li', item.date_end);
+  makeEl(card_ul, 'li', item.price);
 
-  var logisticContainer = document.createElement('div');
-  var displayVenueName = document.createElement('h4');
-  displayVenueName.innerText = 'VENUENAME';
-  logisticContainer.appendChild(displayVenueName);
+  var li_link = document.createElement('li');
+  makeLink(li_link, item.ticketPage, 'Click for tickets');
 
-  var listContainer = document.createElement('ul');
-  var displayShowDates = document.createElement('li');
-  var displayShowTimes = document.createElement('li');
-  var displayShowPrice = document.createElement('li');
-  displayShowDates.innerText = 'STARTDATE' + ' - ' + 'ENDDATE';
-  displayShowTimes.innerText = 'SHOWTIMES';
-  displayShowPrice.innerText = 'SHOWPRICE';
-  listContainer.appendChild(displayShowDates);
-  listContainer.appendChild(displayShowTimes);
-  listContainer.appendChild(displayShowPrice);
+  card_ul.appendChild(li_link);
+  card_aside.appendChild(card_ul);
+  card_show.appendChild(card_aside)
 
-  var linkHolder = document.createElement('li');
-  var displayShowLink = document.createElement('a');
-  displayShowLink.setAttribute('href', 'SHOWLINK');
-  displayShowLink.innerText = 'SHOWLINK';
-  linkHolder.appendChild(displayShowLink);
-  listContainer.appendChild(linkHolder);
-  logisticContainer.appendChild(listContainer);
-  eventCard.appendChild(logisticContainer)
-  var displayDescription = document.createElement('p');
-  displayDescription.innerText = 'SHOWDESCRIPTION';
-  eventCard.appendChild(displayDescription);
-  if ('SHOWIMAGE'){
-    var displayShowImage = document.createElement('img');
-    displayShowImage.setAttribute('src', 'IMGURL');
-    eventCard.appendChild(displayShowImage);
+  makeEl(card_show, 'p', item.show.show_description);
+
+  if (item.show.show_image){
+    makeEl(card_show, 'img', item.show.show_image);
   }
-  var venueButton = document.createElement('button');
-  venueButton.innerText = 'Show Venue Information';
-  venueButton.id = 'venueButton';
-  eventCard.appendChild(venueButton);
-  eventVenueCard.appendChild(eventCard);
-  searchResultsContainer.appendChild(eventVenueCard);
+
+  makeEl(card_ul, 'button', 'Show Venue Info');
+
+  // var venueButton = document.createElement('button');
+  // venueButton.innerText = 'Show Venue Information';
+  // venueButton.id = 'venueButton';
+  // card_show.appendChild(venueButton);
+
+  searchResultsContainer.appendChild(card);
+
+  displayVenueCard(card, item);
 }
 
-function displayVenueCard () {
-  var eventVenueCard = document.getElementById('UNIQUE INDEXED ID');
-  var venueCard = document.createElement('article');
-  var venueName = document.createElement('h3');
-  venueName.innerText = 'VENUENAME';
-  venueCard.appendChild(venueName);
-  var venueLogisticsContainer = document.createElement('div');
-  var venueLogisticsList = document.createElement('ul');
-  var venueAddress = document.createElement('li');
-  venueAddress.innerText = 'VENUEADDRESS';
-  venueLogisticsList.appendChild(venueAddress);
-  var venueNeighborhood = document.createElement('li');
-  venueNeighborhood.innerText = 'VENUENEIGHBORHOOD';
-  venueLogisticsList.appendChild(venueNeighborhood);
-  var venuePhone = document.createElement('li');
-  venuePhone.innerText = 'VENUEPHONE';
-  venueLogisticsList.appendChild(venuePhone);
-  var venueBoxHours = document.createElement('li');
-  venueBoxHours.innerText = 'VENUEBOXOFFICE';
-  venueLogisticsList.appendChild(venueBoxHours);
-  var venueLinkContainer = document.createElement('li');
-  var venueLink = document.createElement('a');
-  venueLink.setAttribute('href', 'VENUEURL');
-  venueLink.innerText = 'VENUEURL';
-  venueLinkContainer.appendChild(venueLink);
-  venueLogisticsList.appendChild(venueLinkContainer);
-  var venueOccupancy = document.createElement('li');
-  venueOccupancy.innerText = 'VENUEOCCUPANCY';
-  venueLogisticsList.appendChild(venueOccupancy);
-  venueLogisticsContainer.appendChild(venueLogisticsList);
-  venueCard.appendChild(venueLogisticsContainer);
-  var venueDescription = document.createElement('p');
-  venueDescription.innerText = 'VENUEDESCRIPTION';
-  venueCard.appendChild(venueDescription);
-  // IS THIS EVENT.TARGET? CHECK ONCE HANDLER/LISTENER CREATED
-  eventVenueCard.appendChild(venueCard);
+function displayVenueCard (card, item) {
+  var card_venue = document.createElement('article');
+  card.appendChild(card_venue);
+
+  makeEl(card_venue, 'h3', item.venue.venue_name);
+
+  var venue_aside = document.createElement('aside');
+  var venue_ul = document.createElement('ul');
+
+  makeEl(venue_ul, 'li', item.venue.venue_address);
+  makeEl(venue_ul, 'li', item.venue.venue_neighborhood);
+  makeEl(venue_ul, 'li', item.venue.venue_phone);
+  makeEl(venue_ul, 'li', item.venue.venue_box_hours);
+  makeEl(venue_ul, 'li', item.venue.venue_occupancy);
+
+  var li_link = document.createElement('li');
+  makeLink(li_link, item.venue.venue_webpage, item.venue.venue_webpage);
+
+  makeEl(card_venue, 'li', item.venue.venue_description);
+}
+
+
+function makeEl(parent, type, content) {
+  var newEl = document.createElement(type);
+  newEl.textContent = content;
+  parent.appendChild(newEl);
+}
+function makeLink(parent, content, content_text) {
+  var newLink = document.createElement('a');
+  newLink.a = content;
+  newLink.textContent = content_text;
+  parent.appendChild(newLink);
 }

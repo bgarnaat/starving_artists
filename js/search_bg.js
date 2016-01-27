@@ -28,7 +28,7 @@ function checkEvents(input) {
     var check_high = item.price >=40 ? item.in_high === true : true; // if >= 40 do all the things
 
     if (check_show && check_venue && check_type && check_low && check_med && check_high) {
-      // displayEventCart(item);
+      displayEventCart(item);
       console.log('shearch does true');
     } else {
       console.log('search does false');
