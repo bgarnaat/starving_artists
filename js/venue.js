@@ -17,7 +17,7 @@ function addVenue(event) {
     occupancy: event.target.venueOcc.value,
     venueDescription: event.target.venueDescription.value,
   };
-  console.log(input);
+  console.log('logging input!', input);
   venues.push(new Venue(input.venueName, input.address, input.neighborhood, input.webpage, input.boxHours, input.phone, input.occupancy, input.venueDescription));
   localStorage.setItem('ls_venue_data', JSON.stringify(venues));
 

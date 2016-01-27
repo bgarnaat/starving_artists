@@ -9,4 +9,4 @@ function fillVenueDropdown() {
     venueDrop.appendChild(venueOption);
   }
 }
-fillVenueDropdown();
+window.setTimeout(fillVenueDropdown);
