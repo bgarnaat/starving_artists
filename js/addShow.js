@@ -10,7 +10,7 @@ function fillVenueDropdown(){
     venueDropdown.appendChild(venueOption);
   }
 }
-fillVenueDropdown();
+window.setTimeout(fillVenueDropdown, 1000);
 
 function add_show(event) {
   console.log(event);

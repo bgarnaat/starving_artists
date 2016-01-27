@@ -9,16 +9,4 @@ function fillVenueDropdown() {
     venueDrop.appendChild(venueOption);
   }
 }
-fillVenueDropdown();
-
-function fillShowDropdown() {
-  var showDrop = document.getElementById('input_show');
-  for (var i = 0; i < shows.length; i++) {
-    var showOption = document.createElement('option');
-    showOption.value = shows[i].show_name;
-    showOption.textContent = shows[i].show_name;
-    showDrop.appendChild(showOption);
-  }
-}
-
-fillShowDropdown();
+window.setTimeout(fillVenueDropdown, 1000);
