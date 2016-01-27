@@ -1,6 +1,6 @@
 'use strict';
 
-var search_results_container = document.getElementById('searchResultsContainer');
+var cardDisplay = document.getElementById('cardDisplay');
 
 function makeEl(parent, type, content) {
   var newEl = document.createElement(type);
@@ -53,7 +53,7 @@ function displayEventCard(item, index) {
   }
 
   card.appendChild(card_show);
-  searchResultsContainer.appendChild(card);
+  cardDisplay.appendChild(card);
 }
 
 function displayVenueCard (event) {
@@ -64,7 +64,6 @@ function displayVenueCard (event) {
     var venue_aside = document.createElement('aside');
     var venue_ul = document.createElement('ul');
     var li_link = document.createElement('li');
-
     clearVenueCards(card);
 
     makeEl(card_venue, 'h3', scheduled_events[card_index].venue.venue_name);
@@ -84,4 +83,4 @@ function displayVenueCard (event) {
   }
 }
 
-search_results_container.addEventListener('click', displayVenueCard);
+cardDisplay.addEventListener('click', displayVenueCard);

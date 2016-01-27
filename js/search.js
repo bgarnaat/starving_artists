@@ -13,7 +13,7 @@ function eventHandlerSubmit(event) {
     in_med: event.target.input_med.checked,
     in_high: event.target.input_high.checked,
   }
-  var node = document.getElementById('searchResultsContainer');
+  var node = document.getElementById('cardDisplay');
   clearVenueCards(node);
   checkEvents(input);
 }
