@@ -1,7 +1,11 @@
+'use strict';
+
 var searchResultsContainer = document.getElementById('searchResultsContainer');
 
-function displayEventCard(item) {
+function displayEventCard(item, index) {
   var card = document.createElement('section');
+  card.id = index;
+
   var card_show = document.createElement('article');
   card_show.className = 'card_show';
   card.appendChild(card_show);
@@ -19,6 +23,7 @@ function displayEventCard(item) {
 
   var li_link = document.createElement('li');
   makeLink(li_link, item.ticketPage, 'Click for tickets');
+  makeEl(card_ul, 'button', 'Show Venue Info');
 
   card_ul.appendChild(li_link);
   card_aside.appendChild(card_ul);
@@ -30,39 +35,34 @@ function displayEventCard(item) {
     makeEl(card_show, 'img', item.show.show_image);
   }
 
-  makeEl(card_ul, 'button', 'Show Venue Info');
-
-  // var venueButton = document.createElement('button');
-  // venueButton.innerText = 'Show Venue Information';
-  // venueButton.id = 'venueButton';
-  // card_show.appendChild(venueButton);
-
   searchResultsContainer.appendChild(card);
-
-  displayVenueCard(card, item);
 }
 
-function displayVenueCard (card, item) {
+function displayVenueCard (event) {
+  var card = event.target.parentNode.parentNode.parentNode.parentNode;
+  var card_index = card.id;
   var card_venue = document.createElement('article');
-  card.appendChild(card_venue);
-
-  makeEl(card_venue, 'h3', item.venue.venue_name);
-
   var venue_aside = document.createElement('aside');
   var venue_ul = document.createElement('ul');
-
-  makeEl(venue_ul, 'li', item.venue.venue_address);
-  makeEl(venue_ul, 'li', item.venue.venue_neighborhood);
-  makeEl(venue_ul, 'li', item.venue.venue_phone);
-  makeEl(venue_ul, 'li', item.venue.venue_box_hours);
-  makeEl(venue_ul, 'li', item.venue.venue_occupancy);
-
   var li_link = document.createElement('li');
-  makeLink(li_link, item.venue.venue_webpage, item.venue.venue_webpage);
 
-  makeEl(card_venue, 'li', item.venue.venue_description);
+  makeEl(card_venue, 'h3', scheduled_events[card_index].venue.venue_name);
+
+  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_address);
+  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_neighborhood);
+  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_phone);
+  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_box_hours);
+  makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_occupancy);
+
+  makeLink(li_link, scheduled_events[card_index].venue.venue_webpage, scheduled_events[card_index].venue.venue_webpage);
+
+  venue_ul.appendChild(li_link);
+  venue_aside.appendChild(venue_ul);
+  card_venue.appendChild(venue_aside);
+  card.appendChild(card_venue);
+
+  makeEl(card_venue, 'p', scheduled_events[card_index].venue.venue_description);  // create paragraph after attaching ul
 }
-
 
 function makeEl(parent, type, content) {
   var newEl = document.createElement(type);
@@ -71,7 +71,10 @@ function makeEl(parent, type, content) {
 }
 function makeLink(parent, content, content_text) {
   var newLink = document.createElement('a');
-  newLink.a = content;
+  newLink.href = content;
   newLink.textContent = content_text;
   parent.appendChild(newLink);
 }
+
+var search_results_container = document.getElementById('searchResultsContainer');
+search_results_container.addEventListener('click', displayVenueCard);
