@@ -1,5 +1,5 @@
 createshow.addEventListener('submit', add_show);
-
+// reset_form.addEventListener('click', resetCard);
 
 function fillVenueDropdown(){
   var venueDropdown = document.getElementById('venueDropdown');
@@ -33,6 +33,21 @@ function add_show(event) {
   localStorage.setItem('ls_show_data', JSON.stringify(shows));
   localStorage.setItem('ls_event_data', JSON.stringify(scheduled_events));
 
+  event.target.show_name.value = null;
+  event.target.start_date.value = null;
+  event.target.end_date.value = null;
+  event.target.price.value = null;
+  event.target.time.value = null;
+  event.target.in_description = null;
+  event.target.venue.value = null;
+  event.target.in_type.value = null;
+  event.target.ticketPage.value = null;
+  event.target.showPic.value = null;
+
+  displayEventCard(scheduled_events[scheduled_events.length - 1], scheduled_events.length - 1);
+}
+
+function resetCard(event) {
   event.target.show_name.value = null;
   event.target.start_date.value = null;
   event.target.end_date.value = null;

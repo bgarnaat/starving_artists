@@ -30,7 +30,7 @@ header {
   padding: 5px;
 }
 
-#searchResultsContainer, .center {
+#cardDisplay, .center {
   flex: 3 1 60%;
   order: 2;
   margin: 4px;
