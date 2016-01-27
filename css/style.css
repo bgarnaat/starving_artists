@@ -1,5 +1,43 @@
+/*
+body {
+  background-image: url(http://www.clipartbest.com/cliparts/RcA/Aay/RcAAayk7i.png);
+  background-size: contain;
+
+}*/
+
+header {
+  position: fixed;
+  margin-top: -155px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.subBody {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  flex-flow: row;
+  margin-top: 155px;
+}
+
+#searchResultsContainer {
+  flex: 3 1 60%;
+  order: 2;
+  margin: 4px;
+  padding: 5px;
+  margin-left: 30%;
+}
 
 
+.aside_bar {
+  flex: 1 6 20%;
+  /*position: fixed;*/
+  order: 1;
+  margin: 4px;
+  padding: 5px;
+}
 
 .nav_line {
   display: flex;
@@ -15,16 +53,6 @@ li {
   list-style: none;
 }
 
-.search_bar {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  height: 80%;
-}
-
-#form_search {
-  padding: 1px 1px 1px 1px;
-}
 
 .searchList {
   display: flex;
@@ -56,6 +84,8 @@ fieldset {
 
 
 
+
+
 .footer {
   display: flex;
   justify-content: center;
@@ -65,4 +95,14 @@ fieldset {
   list-style: none;
   margin-left: 50px;
   margin-right: 50px;
+}
+
+@media all and (max-width: 640px) {
+  .subBody, #page {
+  flex-flow: column;
+  flex-direction: column;
+  }
+  #searchResultsContainer, .aside_bar {
+    order: 0;
+  }
 }
