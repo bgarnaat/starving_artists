@@ -1,3 +1,5 @@
+'use strict';
+
 function fillHoodDown() {
   var hoodDrop = document.getElementById('input_area');
   for (var i = 0; i < allNeighborhoods.length; i++) {
