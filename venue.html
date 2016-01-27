@@ -30,23 +30,8 @@
         <legend>Create New Venue</legend>
         <label>Venue Name*: <input type="text" name="newVenueName" value=""></label>
         <label>Address*: <input type="text" name="newVenueLocation" value = ""></label>
-        <label>Neighborhood*: <select name="newVenueNeighborhood">
-            <option value =""></option>
-            <option value ="queenanne">Queen Anne/Seattle Center</option>
-            <option value ="downtown">Downtown</option>
-            <option value ="sodo">SoDo/International District</option>
-            <option value ="caphill">Capitol Hill</option>
-            <option value ="centraldist">Central District</option>
-            <option value ="ballard">Ballard</option>
-            <option value ="greenlake">Greenlake/Greenwood</option>
-            <option value ="fremont">Fremont</option>
-            <option value ="wallingford">Wallingford</option>
-            <option value ="udist">University District</option>
-            <option value ="westsea">West Seattle</option>
-            <option value ="lakecity">Lake City</option>
-            <option value ="northseattle">North Seattle</option>
-            <option value ="southseattle">South Seattle</option>
-          </select>
+        <label>Neighborhood*: <select id="venueHood" name="newVenueNeighborhood">
+            <option value ="default">Select Neighborhood</option></select>
         </label>
         <label>Webpage: <input type="url" name="venueWebpage" value=""></label>
         <label>Phone Number: <input type="tel" name="venuePhone" value=""></label>
@@ -64,5 +49,8 @@
     <script src='js/object.js'></script>
     <script src='js/local.js'></script>
     <script src='js/venue.js'></script>
+    <script src='js/hood.js'></script>
+    <script src='js/venuehood.js'></script>
+    </script>
   </body>
 </html>
