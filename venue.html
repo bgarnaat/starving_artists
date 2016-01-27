@@ -7,44 +7,54 @@
   </head>
   <body>
     <header>
-      <h1 class="logo">Logo</h1>
-      <h1 class="slogan">Show Finder</h1>
+      <div class="container_title">
+        <img src="" class="logo">
+        <hgroup>
+          <h1 class="title">Show Finder</h1>
+          <h3 class="slogan">slogan</h3>
+        </hgroup>
+      </div>
+      <nav class="navbar">
+        <ul class="nav_line">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="addshows.html">Shows</a>
+          </li>
+          <li>
+            <a href="venue.html">Venues</a>
+          </li>
+          <li>
+            <a href="about.html">About Us</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <ul class="nav_line">
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="addshows.html">Shows</a>
-        </li>
-        <li>
-          <a href="venue.html">Venues</a>
-        </li>
-        <li>
-          <a href="about.html">About Us</a>
-        </li>
-      </ul>
-    </nav>
-    <form id="venueCreateForm" method="post">
-      <fieldset>
-        <legend>Create New Venue</legend>
-        <label>Venue Name*: <input type="text" name="newVenueName" value=""></label>
-        <label>Address*: <input type="text" name="newVenueLocation" value = ""></label>
-        <label>Neighborhood*: <select id="venueHood" name="newVenueNeighborhood">
-            <option value ="default">Select Neighborhood</option></select>
-        </label>
-        <label>Webpage: <input type="url" name="venueWebpage" value=""></label>
-        <label>Phone Number: <input type="tel" name="venuePhone" value=""></label>
-        <label>Box Office Hours: <input type="text" name="venueBoxHours"> </label>
-        <label>Occupancy: <input type="text" name="venueOcc" value=""></label>
-        <label>Venue Description: <textarea rows="8" cols="30" name="venueDescription"></textarea></label>
-        <button type="submit" id="addVenue">Submit Venue</button>
-        <button type="reset" id="">Reset Form</button>
-      </fieldset>
-    </form>
-    <section id="venueListContainer">
-    </section>
+    <div class="main">
+      <form id="venueCreateForm" method="post">
+        <fieldset>
+          <legend>Create New Venue</legend>
+          <ul class=addShowList>
+            <li><label>Venue Name*:</label><input type="text" name="newVenueName" value="" /></li>
+            <li><label>Address*:</label><input type="text" name="newVenueLocation" value = ""></li>
+            <li><label>Neighborhood*:</label><select id="venueHood" name="newVenueNeighborhood">
+              <option value ="default">Select Neighborhood</option></select>
+            </li>
+            <li><label>Webpage:</label><input type="url" name="venueWebpage" value=""></li>
+            <li><label>Phone Number:</label><input type="tel" name="venuePhone" value=""></li>
+            <li><label>Box Office Hours:</label><input type="text" name="venueBoxHours"></li>
+            <li><label>Occupancy:</label><input type="text" name="venueOcc" value=""></li>
+            <li><label>Venue Description:</label><textarea rows="8" cols="30" name="venueDescription"></textarea></li>
+            <li><button type="submit" id="addVenue">Submit Venue</button></li>
+            <li><button type="reset" id="">Reset Form</button></li>
+          </ul>
+        </fieldset>
+      </form>
+      <section id="venueListContainer">
+      </section>
+    </div>
+
     <script src='js/form.js'></script>
     <script src='js/html_generator.js'></script>
     <script src='js/object.js'></script>

@@ -30,7 +30,7 @@ header {
   padding: 5px;
 }
 
-#searchResultsContainer {
+#cardDisplay, .center {
   flex: 3 1 60%;
   order: 2;
   margin: 4px;
@@ -86,8 +86,24 @@ fieldset {
 }
 
 
+/* Add Show Styling*/
 
+.addShowList {
+  display: flex;
+  flex-direction: column;
 
+}
+
+.addShowList > li {
+  margin: 12px 12px 12px -40px;*/
+  text-align: left;
+  display: flex;
+
+}
+
+.input {
+  display: flex;
+}
 
 
 
