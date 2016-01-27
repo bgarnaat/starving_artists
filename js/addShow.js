@@ -29,7 +29,7 @@ function add_show(event) {
   };
   console.log(new_show);
   shows.push(new Show(new_show.in_name, new_show.in_type, new_show.in_description, new_show.pic));
-  scheduled_events.push(new ScheduledEvent(shows[shows.length - 1], venues[new_show.venue], new_show.start_date, new_show.date_end, new_show.in_time, new_show.price, new_show.ticketPage))  ;
+  scheduled_events.push(new ScheduledEvent(shows[shows.length - 1], venues[new_show.venue], new_show.start_date, new_show.end_date, new_show.in_time, new_show.price, new_show.ticketPage))  ;
   localStorage.setItem('ls_show_data', JSON.stringify(shows));
   localStorage.setItem('ls_event_data', JSON.stringify(scheduled_events));
 
