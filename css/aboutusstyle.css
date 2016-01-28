@@ -5,20 +5,20 @@
     -ms-transition: all 0.5s ease;
         transition: all 0.5s ease;
         border-radius: 120px;
-        opacity: .5;
+        opacity: .25;
         width: 150px;
         height: 150px;
 }
 
 .tilt:hover {
-  -webkit-transform: rotate(15deg);
-   -moz-transform: rotate(15deg);
-     -o-transform: rotate(15deg);
-    -ms-transform: rotate(15deg);
-        transform: rotate(15deg);
+  -webkit-transform: rotate(-15deg);
+   -moz-transform: rotate(-15deg);
+     -o-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+        transform: rotate(-15deg);
         opacity: 1;
-        width: 175px;
-        height: 175px;
+        width: 190px;
+        height: 190px;
 }
 
 .bios {
@@ -28,7 +28,7 @@
 
 .profile {
   width: 500px;
-  height: 500px;
+  height: 550px;
   border: 1px solid black;
 }
 
@@ -37,19 +37,23 @@
 }
 
 .focus {
-  -webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-          transition: all 1s ease;
+  -webkit-transition: all 0.75s ease;
+     -moz-transition: all 0.75s ease;
+       -o-transition: all 0.75s ease;
+      -ms-transition: all 0.75s ease;
+          transition: all 0.75s ease;
           border-radius: 50%;
-          opacity: .5;
+          opacity: .25;
+          width: 150px;
+          height: 150px;
 }
 
 .focus:hover {
-  border: 20px solid #000;
+  border: 40px solid #000;
   border-radius: 50%;
   opacity: 1;
+  width: 180px;
+  height: 180px;
 }
 
 .spin {
@@ -59,21 +63,21 @@
       -ms-transition: all 1.0s ease;
           transition: all 1.0s ease;
           border-radius: 50%;
-          opacity: .5;
+          opacity: .25;
           width: 150px;
           height: 150px;
 }
 
 .spin:hover {
   border-radius: 50%;
-  -webkit-transform: rotate(360deg);
-     -moz-transform: rotate(360deg);
-       -o-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(-360deg);
+     -moz-transform: rotate(-360deg);
+       -o-transform: rotate(-360deg);
+      -ms-transform: rotate(-360deg);
+          transform: rotate(-360deg);
           opacity: 1;
-          width: 175px;
-          height: 175px;
+          width: 190px;
+          height: 190px;
 
 }
 
@@ -86,16 +90,29 @@
        -o-transition: all 1s ease;
       -ms-transition: all 1s ease;
           transition: all 1s ease;
-  opacity: .5;
+  opacity: .25;
 }
 
 .grow:hover {
   border-radius: 50%;
-  width: 175px;
-  height: 175px;
+  width: 190px;
+  height: 190px;
   opacity: 1;
 }
 
 h2 {
   text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid #000;
+}
+input {
+  border: 10px solid #000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
