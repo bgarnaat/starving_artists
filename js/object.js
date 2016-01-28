@@ -60,11 +60,11 @@ function Venue(venue_name, venue_address, venue_neighborhood, venue_webpage, ven
   this.venue_occupancy = venue_occupancy;
   this.venue_description = venue_description;
 }
-function Show(show_name, show_type, show_description, showPic) {
+function Show(show_name, show_type, show_description, show_image) {
   this.show_name = show_name;
   this.show_type = show_type;
   this.show_description = show_description;
-  this.showPic = showPic;
+  this.show_image = show_image;
 }
 function ScheduledEvent(show, venue, date_start, date_end, time, price, ticketPage) {
   this.show = show;

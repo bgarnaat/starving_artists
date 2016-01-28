@@ -29,10 +29,6 @@ function checkEvents(input) {
     var check_med = item.price >= 20 && item.price < 40 ? input.in_med === true : true; // if price >= 20 && price < 40 do this
     var check_high = item.price >=40 ? item.in_high === true : true; // if >= 40 do all the things
 
-    console.log('input_area: ' + input.in_area);
-    console.log('item.venue.venue_neighborhood: ' + item.venue.venue_neighborhood);
-    console.log('check_area: ' + check_area);
-
     if (check_show && check_venue && check_area && check_type && check_low && check_med && check_high) {
       displayEventCard(item, index);
     } else {
