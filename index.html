@@ -44,9 +44,6 @@
                 </select>
               </li>
               <li>
-                <input name="input_date" type="date"></input>
-              </li>
-              <li>
                 <select id="input_venue" name="input_venue">
                   <option value="default">Select Venue</option>
                 </select>
@@ -62,10 +59,13 @@
                 </select>
               </li>
               <li>
+                <input name="input_date" type="date"></input>
+              </li>
+              <li  id="price_box">
                 <form name="select_price">
-                  <input type="checkbox" name="input_low" checked="checked"/> $0 - $19.99
-                  <input type="checkbox" name="input_med" checked="checked"/> $20 - $39.99
-                  <input type="checkbox" name="input_high" checked="checked"/> $40+
+                  <input type="checkbox" name="input_low" checked="checked"> $0 - $19.99 </input>
+                  <input type="checkbox" name="input_med" checked="checked"> $20 - $39.99 </input>
+                  <input type="checkbox" name="input_high" checked="checked"> $40+ </input>
                 </form>
               </li>
             </ul>
