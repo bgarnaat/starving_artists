@@ -4,7 +4,7 @@ var shows = [];
 var venues = [];
 var scheduled_events = [];
 
-var allNeighborhoods = ['Ballard', 'Capitol Hill', 'Central District', 'Downtown', 'Fremont', 'Greenlake/Greenwood', 'Lake City/Sand Point', 'North Seattle', 'Queen Anne/Seattle Center', 'Sodo/International District', 'South Seattle', 'University District', 'Wallingford', 'West Seattle'];
+var allNeighborhoods = ['Ballard', 'Capitol Hill', 'Central District', 'Downtown', 'Fremont', 'Greenlake/Greenwood', 'Lake City/Sand Point', 'North Seattle', 'Queen Anne/Seattle Center', 'Sodo/International District', 'South Lake Union', 'South Seattle', 'University District', 'Wallingford', 'West Seattle'];
 var type = {
   type_value: ['comedy_spoken', 'theatre', 'dance', 'cabaret_burlesque', 'music'],
   type_name: ['Comedy/Spoken Word', 'Theatre', 'Dance', 'Cabaret/Burlesque', 'Music'],
