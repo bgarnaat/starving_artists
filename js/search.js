@@ -29,13 +29,6 @@ function checkEvents(input) {
     var check_med = item.price >= 20 && item.price < 40 ? input.in_med === true : true; // if price >= 20 && price < 40 do this
     var check_high = item.price >=40 ? item.in_high === true : true; // if >= 40 do all the things
 
-    console.log('input.in_date: ' + Date.parse(input.in_date));
-    console.log('item.date_start: '+ Date.parse(item.date_start));
-    console.log('item.date_end: ' + Date.parse(item.date_end));
-    console.log('start: ' + (Date.parse(input.in_date) >= Date.parse(item.date_start)));
-    console.log('end: ' + (Date.parse(input.in_date) <= Date.parse(item.date_end)));
-    console.log('check_date: ' + check_date);
-
     if (check_show && check_venue && check_date && check_area && check_type && check_low && check_med && check_high) {
       displayEventCard(item, index);
     } else {
