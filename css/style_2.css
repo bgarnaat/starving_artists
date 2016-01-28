@@ -104,3 +104,13 @@ footer {
   height: 100px;
   background-color: tan;
 }
+
+.current {
+  background-color: blue;
+}
+a.link, a:visited {
+  color: green;
+}
+a.current:link, a.current:visited {
+  color: yellow;
+}
