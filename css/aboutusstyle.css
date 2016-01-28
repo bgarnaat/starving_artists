@@ -39,6 +39,7 @@
   color: white;
   border-color: white;
   opacity: .75;
+  border-radius: 20px;
 }
 
 .profile:hover {
