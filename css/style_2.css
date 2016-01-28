@@ -89,6 +89,12 @@ fieldset {
   margin-left: 370px;
 }
 
+img {
+  width: 38%;
+  height: auto;
+  margin: 1%;
+}
+
 .card {
   display: flex;
   justify-content: center;
@@ -110,6 +116,11 @@ fieldset {
 }
 .card_aside {
   flex: 2 1 30%;
+  margin: 2% 2% 2% 0.5%;
+  border-style: groove;
+}
+article > div > p {
+  margin-top: 2%;
 }
 .card_ul {
 }
@@ -127,11 +138,10 @@ fieldset {
   justify-content: center;
   flex-direction: column;
 }
-
-img {
-  width: 40%;
-  height: auto;
+.card_box > img {
+  align-self: center;
 }
+
 
 footer {
   height: 100px;
