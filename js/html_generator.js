@@ -31,7 +31,7 @@ function displayEventCard(item, index) {
   card.className = 'card';
 
   var card_show = document.createElement('article');
-  var card_box = document.createElement('div')
+  var card_box = document.createElement('div');
   var card_lil_box = document.createElement('div');
   var card_aside = document.createElement('aside');
   var card_ul = document.createElement('ul');
