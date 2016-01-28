@@ -2,13 +2,6 @@
   margin: 0px;
   padding: 0px;
 }
-<<<<<<< HEAD
-li {
-  list-style: none;
-}
-body {
-  background-color: black;
-=======
 body {
   background-color: black;
 }
@@ -22,7 +15,6 @@ img {
 button {
   border-radius: 5px;
   padding: 5px;
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
 }
 header {
   width: 100%;
@@ -32,11 +24,7 @@ header {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-<<<<<<< HEAD
-  background-color: red;
-=======
   background-color: #fff2f2;
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
 }
 .container_title {
   width: 100%;
@@ -73,10 +61,6 @@ header {
   width: 20%;
   min-height: calc(100% - 100px - 170px);
   position: fixed;
-<<<<<<< HEAD
-  background-color: red;
-}
-=======
   background-color: #c91717;
   border-radius: 20px;
   margin-top: 17.5px;
@@ -102,18 +86,12 @@ fieldset {
   align-self: center;
 }
 
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
 .searchList {
   margin: 10px;
 }
 .searchList > li {
-<<<<<<< HEAD
   margin-top: 10px;
   margin-bottom: 10px;
-=======
-  margin-top: 15px;
-  margin-bottom: 15px;
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
 }
 .center {
   min-height: calc(100% - 100px - 170px);
@@ -124,9 +102,6 @@ fieldset {
   margin-left: 370px;
 }
 
-<<<<<<< HEAD
-.card {
-=======
 img {
   width: 38%;
   height: auto;
@@ -136,23 +111,11 @@ img {
 .card {
   margin: 10px;
   padding: 10px;
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 .card_show {
-<<<<<<< HEAD
-  margin: 10px;
-  border-radius: 25px;
-  background-color: lightgrey;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.card_box {
-=======
   margin: 10px 10px 0px 10px;
   border-radius: 25px;
   background-color: lightgrey;
@@ -201,22 +164,10 @@ img {
   align-self: center;
 }
 .card_venue_box {
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-<<<<<<< HEAD
-.card_aside {
-  flex: 2 1 30%;
-}
-.card_ul {
-}
-.card_ul > li {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-=======
 .card_venue_lil_box > p {
   padding: 5px;
   border: 1px solid black;
@@ -235,7 +186,6 @@ img {
 .card_show_box > img {
   align-self: center;
 }
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
 
 footer {
   height: 100px;
@@ -243,19 +193,12 @@ footer {
 }
 
 .current {
-<<<<<<< HEAD
-  background-color: blue;
-=======
   /*background-color: blue;*/
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
 }
 a.link, a:visited {
   color: green;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
 a.current:link, a.current:visited {
   color: yellow;
 }
