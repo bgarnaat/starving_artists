@@ -63,9 +63,13 @@
               </li>
               <li  id="price_box">
                 <form name="select_price">
-                  <input type="checkbox" name="input_low" checked="checked"> $0 - $19.99 </input>
-                  <input type="checkbox" name="input_med" checked="checked"> $20 - $39.99 </input>
-                  <input type="checkbox" name="input_high" checked="checked"> $40+ </input>
+                  <fieldset>Price Range:</fieldset>
+                  <label for="input_low">$0 - $19.99</label>
+                  <input type="checkbox" name="input_low" checked="checked"></input>
+                  <label for="input_med">$20 - 39.99</label>
+                  <input type="checkbox" name="input_med" checked="checked"></input>
+                  <label for="input_high">$40</label>
+                  <input type="checkbox" name="input_high" checked="checked"></input>
                 </form>
               </li>
             </ul>
