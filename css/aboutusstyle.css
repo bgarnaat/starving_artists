@@ -1,0 +1,131 @@
+.tilt {
+  -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        border-radius: 120px;
+        opacity: .25;
+        width: 150px;
+        height: 150px;
+}
+
+.tilt:hover {
+  -webkit-transform: rotate(-50deg);
+   -moz-transform: rotate(-50deg);
+     -o-transform: rotate(-50deg);
+    -ms-transform: rotate(-50deg);
+        transform: rotate(-50deg);
+        opacity: 1;
+        width: 190px;
+        height: 190px;
+}
+
+.bios {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile {
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+     -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+        transition: all 1s ease;
+  width: 500px;
+  height: 550px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  border-color: white;
+  opacity: .75;
+  border-radius: 20px;
+}
+
+.profile:hover {
+  opacity: 1;
+}
+.whoweare {
+  text-align: center;
+}
+
+.focus {
+  -webkit-transition: all 0.75s ease;
+     -moz-transition: all 0.75s ease;
+       -o-transition: all 0.75s ease;
+      -ms-transition: all 0.75s ease;
+          transition: all 0.75s ease;
+          border-radius: 50%;
+          opacity: .25;
+          width: 150px;
+          height: 150px;
+}
+
+.focus:hover {
+  border: 40px solid #000;
+  border-radius: 50%;
+  opacity: 1;
+  width: 180px;
+  height: 180px;
+}
+
+.spin {
+  -webkit-transition: all 1.0s ease;
+     -moz-transition: all 1.0s ease;
+       -o-transition: all 1.0s ease;
+      -ms-transition: all 1.0s ease;
+          transition: all 1.0s ease;
+          border-radius: 50%;
+          opacity: .25;
+          width: 150px;
+          height: 150px;
+}
+
+.spin:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(-360deg);
+     -moz-transform: rotate(-360deg);
+       -o-transform: rotate(-360deg);
+      -ms-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+          opacity: 1;
+          width: 190px;
+          height: 190px;
+
+}
+
+.grow {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+  opacity: .25;
+}
+
+.grow:hover {
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  opacity: 1;
+}
+
+h2 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid white;
+}
+input {
+  border: 10px solid white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

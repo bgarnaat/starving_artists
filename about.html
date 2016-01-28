@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/aboutusstyle.css" media="screen">
     <title>About Us</title>
   </head>
   <body>
@@ -26,28 +27,49 @@
         </li>
       </ul>
     </nav>
-    <h1>Who We Are</h1>
-    <h2>Zachary Simonson</h2>
-      <img src="" alt="Zachary Simonson Photo" />
-      <p>
-      Some biographical information to be updated later.
-      </p>
-    <h2>Sam Gruse</h2>
-    <button type="imgae" id="clearButton" src="kjlkj" alt="submit">Clear Storage</button>
-    <p>
-      Some biographical information to be updated later.
-    </p>
-    <h2>Ben Garnaat</h2>
-    <img src="" alt="Ben Garnaat Photo" />
-    <p>
-      Some biographical information to be updated later.
-    </p>
-    <h2>Jeff Eng</h2>
-    <img src="" alt="Jeff Eng Photo" />
-    <p>
-      Some biographical information to be updated later.
-    </p>
+    <h1 class="whoweare">Who We Are</h1>
+    <div class="bios">
+      <section class="profile">
+        <h2>Zachary Simonson</h2>
+        <img src="img/zach-profile.jpg" alt="Zachary Simonson Photo" class="grow"/>
+        <ul>
+        <p>Theater actor ready to make coding his next great performance.</p>
+        <li><b>Favorite Hobby:</b> Collecting comics</li>
+        <li><b>Bucket List:</b> Climb a mountain</li>
+        <li><b>First Computer:</b> Some Macintosh monstrosity</li>
+      </ul>
+      </section>
+      <section class="profile">
+        <h2>Sam Gruse</h2>
+        <input type="image" id="clearButton" alt="submit" src="img/sam-profile.jpg" class="spin">
+      <ul>
+        <p>Previously worked at catering business and now ready to serve up some code.</p>
+      <li><b>Favorite Hobby:</b> Gaming</li>
+      <li><b>Bucket List:</b> Surf</li>
+      <li><b>First Computer:</b> A beige box</li>
     </ul>
+  </section>
+  <section class="profile">
+    <h2>Ben Garnaat</h2>
+    <img src="img/ben-profile.jpg" alt="Ben Garnaat Photo" class="focus"/>
+    <ul>
+      <p>Chemistry grad ready to combine HTML, CSS, and JavaScript into perfect ratios.</p>
+      <li><b>Favorite Hobby:</b> Making hot sauce</li>
+      <li><b>Bucket List:</b> Skydive</li>
+      <li><b>First Computer:</b> Built own computer</li>
+    </ul>
+  </section>
+  <section class="profile">
+    <h2>Jeff Eng</h2>
+    <img src="img/jeff-profile.jpg" alt="Jeff Eng Photo" class="tilt"/>
+    <ul>
+    <p>Accounting specialist with a love of tech. Aspiring coder who wants to build cool stuff.</p>
+      <li><b>Favorite Hobby:</b> Basketball</li>
+      <li><b>Bucket List:</b> Finish an Ironman triathlon</li>
+      <li><b>First Computer:</b> Gateway 2000</li>
+    </ul>
+  </section>
+</div>
     <script src="js/clear.js"></script>
   </body>
 </html>
