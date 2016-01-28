@@ -2,16 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/style_2.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:300|Roboto+Slab' rel='stylesheet' type='text/css'>
+
     <title>Venues</title>
   </head>
   <body>
     <header>
       <div class="container_title">
-        <img src="" class="logo">
+        <img src="img/mikechecklogo2.png" class="logo">
         <hgroup>
-          <h1 class="title">Show Finder</h1>
-          <h3 class="slogan">slogan</h3>
+          <!-- <h1 class="title">Show Finder</h1> -->
+          <h3 class="slogan">Check what. Check who. Check where.</h3>
         </hgroup>
       </div>
       <nav class="navbar">
@@ -22,7 +24,7 @@
           <li>
             <a href="show.html">Shows</a>
           </li>
-          <li class="current">
+          <li id="current">
             <a href="venue.html">Venues</a>
           </li>
           <li>
@@ -32,26 +34,28 @@
       </nav>
     </header>
     <div class="main">
+      <aside class="aside_left">
       <form id="venueCreateForm" method="post">
         <fieldset>
           <legend>Create New Venue</legend>
           <ul class=addShowList>
-            <li><label>Venue Name*:</label><input type="text" name="newVenueName" value="" /></li>
-            <li><label>Address*:</label><input type="text" name="newVenueLocation" value = ""></li>
-            <li><label>Neighborhood*:</label><select id="input_area" name="newVenueNeighborhood">
+            <li><label>Venue Name:</label><input type="text" name="newVenueName" value="" /></li>
+            <li><label>Address:</label><input type="text" name="newVenueLocation" value = ""></li>
+            <li><label>Neighborhood:</label><select id="input_area" name="newVenueNeighborhood">
               <option value ="default">Select Neighborhood</option></select>
             </li>
-            <li><label>Webpage:</label><input type="url" name="venueWebpage" value=""></li>
+            <li><label>Webpage:</label><input type="url" name="venueWebpage" value="http://"></li>
             <li><label>Phone Number:</label><input type="tel" name="venuePhone" value=""></li>
             <li><label>Box Office Hours:</label><input type="text" name="venueBoxHours"></li>
             <li><label>Occupancy:</label><input type="text" name="venueOcc" value=""></li>
-            <li><label>Venue Description:</label><textarea rows="8" cols="30" name="venueDescription"></textarea></li>
+            <li><label>Venue Description:</label><textarea rows="5" cols="50" name="venueDescription"></textarea></li>
             <li><button type="submit" id="addVenue">Submit Venue</button></li>
             <li><button type="reset" id="">Reset Form</button></li>
           </ul>
         </fieldset>
       </form>
-      <section id="venueListContainer">
+    </aside>
+      <section id="cardDisplay" class="center">
       </section>
     </div>
 
