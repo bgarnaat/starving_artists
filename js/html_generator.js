@@ -31,26 +31,16 @@ function displayEventCard(item, index) {
   card.className = 'card';
 
   var card_show = document.createElement('article');
-<<<<<<< HEAD
   var card_box = document.createElement('div')
-=======
-  var card_box = document.createElement('div');
   var card_lil_box = document.createElement('div');
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
   var card_aside = document.createElement('aside');
   var card_ul = document.createElement('ul');
   var li_link = document.createElement('li');
   card_show.className = 'card_show';
-<<<<<<< HEAD
-  card_box.className = 'card_box';
-  card_aside.className = 'card_aside';
-  card_ul.className = 'card_ul';
-=======
   card_box.className = 'card_show_box';
   card_lil_box.className = 'card_show_lil_box';
   card_aside.className = 'card_show_aside';
   card_ul.className = 'card_show_ul';
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
 
   makeEl(card_show, 'h3', item.show.show_name);
   makeEl(card_ul, 'li', item.show.show_type);
@@ -65,20 +55,12 @@ function displayEventCard(item, index) {
 
   makeEl(card_aside, 'button', 'Show Venue Info');  // create & appende after li_link is appended to preserve item order
 
-<<<<<<< HEAD
-  card_aside.appendChild(card_ul);
-  card_box.appendChild(card_aside);
-  card_show.appendChild(card_box)
-
-  makeEl(card_box, 'p', item.show.show_description);
-=======
   card_box.appendChild(card_aside);
   card_show.appendChild(card_box)
   card_box.appendChild(card_lil_box)
 
   makeEl(card_lil_box, 'label', 'Description:');
   makeEl(card_lil_box, 'p', item.show.show_description);
->>>>>>> ec01ccf6047e2f0d1ca397e41e7a52ce27dfd705
 
   if (item.show.show_image){
     makeImg(card_box, item.show.show_image);
@@ -89,7 +71,7 @@ function displayEventCard(item, index) {
 }
 
 function displayVenueCard (event) {
-  var card = event.target.parentNode.parentNode.parentNode.parentNode.parentNode;
+  var card = event.target.parentNode.parentNode.parentNode.parentNode;
   if (card.className === 'card') {
     var card_index = card.id;
     var card_venue = document.createElement('article');
