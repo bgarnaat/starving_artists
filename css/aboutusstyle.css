@@ -11,11 +11,11 @@
 }
 
 .tilt:hover {
-  -webkit-transform: rotate(-15deg);
-   -moz-transform: rotate(-15deg);
-     -o-transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
-        transform: rotate(-15deg);
+  -webkit-transform: rotate(-50deg);
+   -moz-transform: rotate(-50deg);
+     -o-transform: rotate(-50deg);
+    -ms-transform: rotate(-50deg);
+        transform: rotate(-50deg);
         opacity: 1;
         width: 190px;
         height: 190px;
@@ -27,11 +27,23 @@
 }
 
 .profile {
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+     -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+        transition: all 1s ease;
   width: 500px;
   height: 550px;
-  border: 1px solid black;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  border-color: white;
+  opacity: .75;
 }
 
+.profile:hover {
+  opacity: 1;
+}
 .whoweare {
   text-align: center;
 }
@@ -108,10 +120,10 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 10px solid #000;
+  border: 10px solid white;
 }
 input {
-  border: 10px solid #000;
+  border: 10px solid white;
   display: block;
   margin-left: auto;
   margin-right: auto;
