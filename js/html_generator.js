@@ -75,6 +75,7 @@ function displayVenueCard (event) {
     var venue_ul = document.createElement('ul');
     var li_link = document.createElement('li');
     clearVenueCards(card);
+    card_venue.class = "card_venue";
 
     makeEl(card_venue, 'h3', scheduled_events[card_index].venue.venue_name);
     makeEl(venue_ul, 'li', scheduled_events[card_index].venue.venue_address);
