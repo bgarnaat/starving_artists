@@ -21,7 +21,7 @@ function eventHandlerSubmit(event) {
 function checkEvents(input) {
   scheduled_events.forEach(function(item, index, array) {
     var check_show = input.in_show !== 'default' ? input.in_show === item.show.show_name : true;
-    var check_date = input.in_date !== 'deafult' ? (input.in_date >= item.date_start && input.in_date <= item.date_end) : true;
+    var check_date = input.in_date !== '' ? (Date.parse(input.in_date) >= (Date.parse(item.date_start) - 86400000) && Date.parse(input.in_date) <= Date.parse(item.date_end)) : true;
     var check_venue = input.in_venue !== 'default' ? input.in_venue === item.venue.venue_name : true;
     var check_area = input.in_area !== 'default' ? input.in_area === item.venue.venue_neighborhood : true;
     var check_type = input.in_type !== 'default' ? input.in_type === item.show.show_type : true;
@@ -29,11 +29,7 @@ function checkEvents(input) {
     var check_med = item.price >= 20 && item.price < 40 ? input.in_med === true : true; // if price >= 20 && price < 40 do this
     var check_high = item.price >=40 ? item.in_high === true : true; // if >= 40 do all the things
 
-    console.log('input_area: ' + input.in_area);
-    console.log('item.venue.venue_neighborhood: ' + item.venue.venue_neighborhood);
-    console.log('check_area: ' + check_area);
-
-    if (check_show && check_venue && check_area && check_type && check_low && check_med && check_high) {
+    if (check_show && check_venue && check_date && check_area && check_type && check_low && check_med && check_high) {
       displayEventCard(item, index);
     } else {
     }

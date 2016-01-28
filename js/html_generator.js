@@ -7,6 +7,11 @@ function makeEl(parent, type, content) {
   newEl.textContent = content;
   parent.appendChild(newEl);
 }
+function makeImg(parent, content) {
+  var newImg = document.createElement('img');
+  newImg.src = content;
+  parent.appendChild(newImg);
+}
 function makeLink(parent, content, content_text) {
   var newLink = document.createElement('a');
   newLink.href = content;
@@ -40,7 +45,7 @@ function displayEventCard(item, index) {
   makeEl(card_ul, 'li', item.venue.venue_name);
   makeEl(card_ul, 'li', item.date_start);
   makeEl(card_ul, 'li', item.date_end);
-  makeEl(card_ul, 'li', item.price);
+  makeEl(card_ul, 'li', '$' + item.price);
   makeLink(li_link, item.ticketPage, 'Click for tickets');
 
   card_ul.appendChild(li_link);  // append before creating button element to preserve item order
@@ -54,7 +59,7 @@ function displayEventCard(item, index) {
   makeEl(card_box, 'p', item.show.show_description);
 
   if (item.show.show_image){
-    makeEl(card_box, 'img', item.show.show_image);
+    makeImg(card_box, item.show.show_image);
   }
 
   card.appendChild(card_show);
