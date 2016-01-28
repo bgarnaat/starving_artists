@@ -191,6 +191,7 @@ footer {
 a.link, a:visited {
   color: green;
 }
+
 a.current:link, a.current:visited {
   color: yellow;
 }
