@@ -2,11 +2,19 @@
   margin: 0px;
   padding: 0px;
 }
+body {
+  background-color: black;
+}
 li {
   list-style: none;
 }
-body {
-  background-color: black;
+img {
+  width: 40%;
+  height: auto;
+}
+button {
+  border-radius: 5px;
+  padding: 5px;
 }
 header {
   width: 100%;
@@ -57,21 +65,26 @@ header {
   border-radius: 20px;
   margin-top: 17.5px;
 }
-
 #form_search {
   margin-top: 20px;
 }
-
 fieldset {
   border: none;
   text-align: center;
 }
-
-/*#price_box {
+#price_box {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}*/
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#price_box > label {
+  padding-top: 10px;
+}
+#price_box > input {
+  align-self: center;
+}
 
 .searchList {
   margin: 10px;
@@ -90,49 +103,83 @@ fieldset {
 }
 
 .card {
+  margin: 10px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 .card_show {
-  margin: 10px;
+  margin: 10px 10px 0px 10px;
   border-radius: 25px;
   background-color: lightgrey;
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.card_box {
+.card_show_box {
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-.card_aside {
-  flex: 2 1 30%;
+.card_show_aside {
+  flex: 2 1 30;
+  margin: 5px;
 }
-.card_ul {
+.card_show_ul {
 }
-.card_ul > li {
+.card_show_ul > li {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-.card > article {
+.card_show_aside > button {
   margin: 10px;
+  padding: 0px;
+  border-radius: 10px;
+}
+.card_show_lil_box {
+  margin: 5px;
+}
+.card_show_lil_box > p {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.card_venue {
+  width: 60%;
+  margin: 0px 10px 10px 10px;
   border-radius: 25px;
   background-color: lightgrey;
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-self: center;
 }
-
-img {
-  width: 40%;
-  height: auto;
+.card_venue_box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
-
+.card_venue_lil_box > p {
+  padding: 5px;
+  border: 1px solid black;
+  margin: 5px;
+}
+.card_venue_aside {
+  padding: 10px;
+  flex: 2 1 30%;
+}
+.card_venue_ul {
+}
+.card_venue_ul > li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card_show_box > img {
+  align-self: center;
+}
 footer {
   height: 100px;
   background-color: tan;
