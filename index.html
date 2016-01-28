@@ -2,25 +2,26 @@
 <html>
   <head>
     <!-- <meta charset="utf-8"> -->
-    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8"> -->
+    <link rel="stylesheet" href="css/style_2.css" type="text/css" charset="utf-8">
     <title>Find a show</title>
   </head>
   <body>
     <header>
-      <div class="container_title">
+      <section class="container_title">
         <img src="" class="logo">
         <hgroup>
           <h1 class="title">Show Finder</h1>
           <h3 class="slogan">slogan</h3>
         </hgroup>
-      </div>
+      </section>
       <nav class="navbar">
         <ul class="nav_line">
-          <li>
+          <li class="current">
             <a href="index.html">Home</a>
           </li>
           <li>
-            <a href="addshows.html">Shows</a>
+            <a href="show.html">Shows</a>
           </li>
           <li>
             <a href="venue.html">Venues</a>
@@ -56,10 +57,8 @@
                 </select>
               </li>
               <li>
-                <select name="input_type">
+                <select id="input_type" name="input_type">
                   <option value="default">Type of show</option>
-                  <option value="A">A</option>
-                  <option value="B">B</option>
                 </select>
               </li>
               <li>
@@ -76,12 +75,6 @@
       </aside>
       <section id="cardDisplay" class="center">
       </section>
-      <aside class="aside_right">
-        <ul>
-          <li>FEATURED ITEM #1</li>
-          <li>FEATURED ITEM #2</li>
-        </ul>
-      </aside>
     </div>
     <footer>
       <ul class="footer">

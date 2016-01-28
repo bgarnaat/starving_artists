@@ -1,5 +1,7 @@
 'use strict';
 
+window.setTimeout(fillHoodDown, 1000);
+
 function fillHoodDown() {
   var hoodDrop = document.getElementById('input_area');
   for (var i = 0; i < allNeighborhoods.length; i++) {
@@ -9,5 +11,3 @@ function fillHoodDown() {
     hoodDrop.appendChild(optEl);
   }
 }
-
-fillHoodDown();
