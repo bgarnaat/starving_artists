@@ -10,4 +10,4 @@ function fillHoodDown() {
   }
 }
 
-fillHoodDown();
+window.setTimeout(fillHoodDown, 1000);
