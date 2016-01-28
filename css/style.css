@@ -65,6 +65,14 @@ li {
 }
 
 
+a:link, a:visited {           /* For the highlighed Link */
+  color: red;
+}
+
+a.current:link, a.current:visited {
+  color: blue;
+}
+
 .searchList {
   display: flex;
   flex-direction: column;
