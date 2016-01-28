@@ -27,7 +27,6 @@ function add_show(event) {
   if (!event.target.show_name.value || !event.target.start_date.value || !event.target.end_date.value || !event.target.price.value || !event.target.time.value || !event.target.in_description.value || !event.target.venue.value || !event.target.in_type.value) {
     return alert('Fields cannot be empty');
   }
-  console.log('true');
   var new_show = {
     in_name: event.target.show_name.value,
     start_date: event.target.start_date.value,
