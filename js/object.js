@@ -5,6 +5,11 @@ var venues = [];
 var scheduled_events = [];
 
 var allNeighborhoods = ['Ballard', 'Capitol Hill', 'Central District', 'Downtown', 'Fremont', 'Greenlake/Greenwood', 'Lake City/Sand Point', 'North Seattle', 'Queen Anne/Seattle Center', 'Sodo/International District', 'South Seattle', 'University District', 'Wallingford', 'West Seattle'];
+var type = {
+  type_value: ['comedy_spoken', 'theatre', 'dance', 'cabaret_burlesque', 'music'],
+  type_name: ['Comedy/Spoken Word', 'Theatre', 'Dance', 'Cabaret/Burlesque', 'Music'],
+}
+
 
 var data_venues_name = ['Ballard Underground Theater', 'The Sunset', '12th Avenue Arts', 'Annex Theater', 'Nuemos', 'Gay City Arts-Calamus Auditorium', 'Langston Hughes Performing Arts Institute', 'Washington Hall', 'ACT-A Contemporary Theatre', '5th Avenue Theatre', 'Unexpected Productions', 'Theater Schmeater', 'The Moore Theatre', 'Seattle Public Theatre', 'Taproot Theatre-Kendall Center', 'Seattle Musical Theater', 'Seattle Repertory Theatre', 'Armory Theater', 'Theatre Puget Sound', 'On the Boards', 'Inscape Arts', 'Theatre Off Jackson', 'Seattle Children\'s Theatre', 'Neptune Theater', 'Jones Playhouse', 'Cafe Nordo', 'Stone Soup', 'West of Lenin', 'ArtsWest', 'Re-Bar'];
 var data_venues_address = ['2220 NW Market St. Seattle, WA 98107', '5433 Ballard Ave NW Seattle, WA 98107', '1620 12th Ave, Seattle, WA 98122', '1100 E Pike St, Seattle, WA 98122', '925 E Pike St, Seattle, WA 98122', '517 E Pike St, Seattle, WA 98122', '104 17th Ave S Seattle, WA 98144', '153 14th Ave, Seattle, WA 98122', '700 Union St, Seattle, WA 98101', '1308 5th Ave, Seattle, WA 98101', '1428 Post Alley, Seattle, WA 98101', '2125 3rd Ave, Seattle, WA 98121', '1932 2nd Ave, Seattle, WA 98101', '7312 West Green Lake Dr N, Seattle, WA 98103', '204 N 85th St, Seattle, WA 98103', '7120 62nd Ave NE, Seattle, WA 98115', '155 Mercer St, Seattle, WA 98109', '305 Harrison St, Seattle, WA 98109', '305 Harrison St, Seattle, WA 98109', '100 W. Roy St, Seattle, WA 98119', '815 Seattle Blvd S, Seattle, WA 98134', '409 7th Ave S, Seattle, WA 98104', '201 Thomas St, Seattle, WA 98109', '1303 NE 45th St, Seattle, WA 98105', ' 4045 University Way NE, Seattle, WA 98105', '109 S Main St, Seattle, WA 98104', '4029 Stone Way N, Seattle, WA 98103', '203 N 36th St, Seattle, WA 98103', '4711 California Ave SW, Seattle, WA 98116', '1114 Howell St, Seattle, WA 98101'];
