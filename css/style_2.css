@@ -1,0 +1,116 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+body {
+  background-color: black;
+}
+header {
+  width: 100%;
+  position: fixed;
+  margin-top: -170px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: red;
+}
+.container_title {
+  width: 100%;
+  height: 90px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  height: 75px;
+  width: 75px;
+}
+.nav_line {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.nav_line > li {
+  padding: 10px 5% 10px 5%;
+}
+.main {
+  heigh: calc(100% - 100px);
+  min-height: calc(100% - 100px);
+  margin-top: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-content: stretch;
+  background-color: black;
+}
+.aside_left {
+  min-width: 350px;
+  width: 20%;
+  min-height: calc(100% - 100px - 170px);
+  position: fixed;
+  background-color: red;
+}
+.searchList {
+  margin: 10px;
+}
+.searchList > li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.center {
+  min-height: calc(100% - 100px - 170px);
+  flex: 3 1 80%;
+  order: 2;
+  margin: 4px;
+  padding: 5px;
+  margin-left: 370px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.card_show {
+  margin: 10px;
+  border-radius: 25px;
+  background-color: lightgrey;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.card_box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.card_aside {
+  flex: 2 1 30%;
+}
+.card_ul {
+}
+.card_ul > li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  height: 100px;
+  background-color: tan;
+}
+
+.current {
+  background-color: blue;
+}
+a.link, a:visited {
+  color: green;
+}
+a.current:link, a.current:visited {
+  color: yellow;
+}

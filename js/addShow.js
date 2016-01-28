@@ -1,5 +1,8 @@
+'use strict';
+
 createshow.addEventListener('submit', add_show);
-// reset_form.addEventListener('click', resetCard);
+window.setTimeout(fillTypeDropdown, 1000);
+window.setTimeout(fillVenueDropdown, 1000);
 
 function fillVenueDropdown(){
   var venueDropdown = document.getElementById('venueDropdown');
@@ -10,8 +13,15 @@ function fillVenueDropdown(){
     venueDropdown.appendChild(venueOption);
   }
 }
-fillVenueDropdown();
-
+function fillTypeDropdown() {
+  var input_type = document.getElementById('input_type');
+  for (var i = 0; i < type.type_name.length; i++) {
+    var drop_type = document.createElement('option');
+    drop_type.value = type.type_name[i];
+    drop_type.textContent = type.type_name[i];
+    input_type.appendChild(drop_type);
+  }
+}
 function add_show(event) {
   console.log(event);
   event.preventDefault();
@@ -45,17 +55,4 @@ function add_show(event) {
   event.target.showPic.value = null;
 
   displayEventCard(scheduled_events[scheduled_events.length - 1], scheduled_events.length - 1);
-}
-
-function resetCard(event) {
-  event.target.show_name.value = null;
-  event.target.start_date.value = null;
-  event.target.end_date.value = null;
-  event.target.price.value = null;
-  event.target.time.value = null;
-  event.target.in_description = null;
-  event.target.venue.value = null;
-  event.target.in_type.value = null;
-  event.target.ticketPage.value = null;
-  event.target.showPic.value = null;
 }
