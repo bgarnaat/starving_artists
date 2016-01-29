@@ -155,13 +155,14 @@ img {
   font-family: 'Roboto Slab', serif;
 }
 .card_show_aside {
-  flex: 2 1 30;
+  width: 160px;
+  order: 0;
   margin: 5px;
 }
 .card_show_ul {
 }
 .card_show_ul > li {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 10px;
 }
 .card_show_aside > button {
@@ -171,7 +172,7 @@ img {
 }
 .card_show_lil_box {
   margin: 10px 5px 5px 5px;
-
+  flex: 1 2 calc(50% - 160px);
 }
 .card_show_lil_box > p {
   padding: 5px;
@@ -210,11 +211,11 @@ img {
 .card_venue_ul {
 }
 .card_venue_ul > li {
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 .card_show_box > img {
   align-self: center;
+  flex: 2 3 50%;
 }
 
 #current {
@@ -228,12 +229,15 @@ a.link, a.visited {
   color: yellow;
 }
 
-@media all and (max-width: 640px) {
-  .subBody, #page {
+@media all and (max-width : 640px) {
+  .main {
   flex-flow: column;
-  flex-direction: column;
+  flex-wrap: wrap;
   }
-  #searchResultsContainer, .aside_bar {
-    order: 0;
+  .aside_left {
+    position: relative;
+  }
+  .center {
+    margin-left: 4px;
   }
 }
