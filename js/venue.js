@@ -5,7 +5,7 @@ venueCreateForm.addEventListener('submit', addVenue);
 
 function addVenue(event) {
   event.preventDefault();
-  if (!event.target.newVenueName || !event.target.newVenueLocation || !event.target.newVenueNeighborhood || !event.target.venuePhone || !event.target.venueBoxHours || !event.target.venue_occupancy || !event.target.venueDescription) {
+  if (!event.target.newVenueName || !event.target.newVenueLocation || !event.target.newVenueNeighborhood || !event.target.venuePhone || !event.target.venueBoxHours || !event.target.venueOcc || !event.target.venueDescription) {
     return alert('Fields cannot be empty');
   }
 
