@@ -41,10 +41,8 @@ header {
   top: 10px;
   left: 10px;
 }
-
 hgroup {
   align-self: center;
-
 }
 
 .slogan {
@@ -58,7 +56,6 @@ hgroup {
 
 .nav_line {
   width: 100%;
-  /*padding: 10px;*/
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -69,8 +66,8 @@ hgroup {
   border-radius: 20px 20px 0px 0px;
 }
 .main {
-  heigh: calc(100% - 100px);
-  min-height: calc(100% - 100px);
+  /*height: calc(100% - 100px);
+  min-height: calc(100% - 100px);*/
   margin-top: 150px;
   display: flex;
   justify-content: space-between;
@@ -79,15 +76,12 @@ hgroup {
 .aside_left {
   min-width: 350px;
   width: 20%;
-  min-height: calc(100% - 100px - 170px);
+  padding: 10px;
   position: fixed;
   background-color: #D6F4FF;
   border-radius: 20px;
   margin-top: 37.5px;
   margin-left: 25px;
-}
-#form_search {
-  margin-top: 20px;
 }
 fieldset {
   border: none;
@@ -221,10 +215,6 @@ img {
 #current {
   background-color: #464C59;
 }
-a.link, a.visited {
-  color: green;
-}
-
 #current > a:link, #current > a:visited {
   color: yellow;
 }
